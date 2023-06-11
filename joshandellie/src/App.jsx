@@ -13,8 +13,8 @@ import CanvasLoader from "./Loader";
 // import Modal from "./Modal";
 
 import { Content } from "./sidebar";
-import { Sidebar } from "./sidebar";
-import { Yodal } from "./sidebar";
+import { Sidebar } from "./Sidebar";
+import { Yodal } from "./Sidebar";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -96,7 +96,7 @@ export default function App() {
 									<Gltf src="./models/screenprojects1.glb" castShadow receiveShadow onClick={(e) => window.alert("Project Detail Page Coming Soon")} />
 									<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
 									<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
-									<Gltf src="./insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
+									<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
 									<Gltf src="./models/email.glb" castShadow receiveShadow onClick={(e) => window.alert("Josh.T.Garvey@gmail.com | email forum coming soon")} />
 									{/* <Gltf src="./nametag.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} /> */}
 								</SheetProvider>

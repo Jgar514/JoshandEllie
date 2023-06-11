@@ -87,17 +87,17 @@ export default function App() {
 								<SheetProvider sheet={sheet}>
 									<Scene />
 
-									<Gltf src="./scene4.glb" />
+									<Gltf src="./models/scene4.glb" />
 									{/* <Gltf src="./scene529.glb" /> */}
-									<Gltf src="./ellie3.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} />
-									<Gltf src="./who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
-									<Gltf src="./wood2.glb" castShadow receiveShadow onClick={(e) => window.alert("Wood Art Detail Page Coming Soon")} />
-									<Gltf src="./projects.glb" castShadow receiveShadow onClick={() => setOpenModal(true)} />
-									<Gltf src="./screenprojects1.glb" castShadow receiveShadow onClick={(e) => window.alert("Project Detail Page Coming Soon")} />
-									<Gltf src="./github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
-									<Gltf src="./linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
+									<Gltf src="./models/ellie3.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} />
+									<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
+									<Gltf src="./models/wood2.glb" castShadow receiveShadow onClick={(e) => window.alert("Wood Art Detail Page Coming Soon")} />
+									<Gltf src="./models/projects.glb" castShadow receiveShadow onClick={() => setOpenModal(true)} />
+									<Gltf src="./models/screenprojects1.glb" castShadow receiveShadow onClick={(e) => window.alert("Project Detail Page Coming Soon")} />
+									<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
+									<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
 									<Gltf src="./insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
-									<Gltf src="./email.glb" castShadow receiveShadow onClick={(e) => window.alert("Josh.T.Garvey@gmail.com | email forum coming soon")} />
+									<Gltf src="./models/email.glb" castShadow receiveShadow onClick={(e) => window.alert("Josh.T.Garvey@gmail.com | email forum coming soon")} />
 									{/* <Gltf src="./nametag.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} /> */}
 								</SheetProvider>
 							</ScrollControls>

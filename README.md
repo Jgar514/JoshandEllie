@@ -1,6 +1,6 @@
 # JoshuaGarvey.com
 
-Sure! Here's a technical description of your coding project:
+About My Website
 
 The project is a website that incorporates a 3D model and interactive scrolling functionality. The main purpose of the website is to provide a visually engaging user experience by allowing users to navigate through a 3D scene as they scroll down the page.
 

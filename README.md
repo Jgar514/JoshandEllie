@@ -1,4 +1,6 @@
 # JoshuaGarvey.com
+<img width="1281" alt="Screenshot 2023-06-12 at 4 00 13 PM" src="https://github.com/Jgar514/JoshandEllie/assets/119822971/b5c9977f-3035-4664-864e-2689e8b6899c">
+
 
 About My Website
 

@@ -6,6 +6,12 @@ The project is a website that incorporates a 3D model and interactive scrolling 
 
 To achieve this, several technologies were employed. The 3D models were created using Blender, a popular open-source 3D modeling and animation software. The website itself was built using React, a JavaScript library for building user interfaces, and Vite, a fast build tool for web applications.
 
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
 For the 3D rendering, the project utilized the libraries @react-three/fiber and @react-three/drei. These libraries provide a React-based approach to working with WebGL, allowing for easy integration of 3D elements into the website. Additionally, @theatre/core and @theatre/r3f were used for camera and animation management, enhancing the overall visual experience.
 
 The website includes interactive elements in the 3D scene. Users can click on various 3D objects within the scene, which will redirect them to different pages or sections of the website. This functionality enhances the interactivity and engagement of the website.

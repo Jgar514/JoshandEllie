@@ -1,12 +1,12 @@
 # JoshuaGarvey.com
+
 <img width="1281" alt="Screenshot 2023-06-12 at 4 00 13 PM" src="https://github.com/Jgar514/JoshandEllie/assets/119822971/b5c9977f-3035-4664-864e-2689e8b6899c">
 
-
-```
+<!-- ```
 function test() {
   console.log("notice the blank line before this function?");
 }
-```
+``` -->
 
 About My Website
 
@@ -14,11 +14,11 @@ The project is a website that incorporates a 3D model and interactive scrolling 
 
 To achieve this, several technologies were employed. The 3D models were created using Blender, a popular open-source 3D modeling and animation software. The website itself was built using React, a JavaScript library for building user interfaces, and Vite, a fast build tool for web applications.
 
-```
+<!-- ```
 function test() {
   console.log("notice the blank line before this function?");
 }
-```
+``` -->
 
 For the 3D rendering, the project utilized the libraries @react-three/fiber and @react-three/drei. These libraries provide a React-based approach to working with WebGL, allowing for easy integration of 3D elements into the website. Additionally, @theatre/core and @theatre/r3f were used for camera and animation management, enhancing the overall visual experience.
 

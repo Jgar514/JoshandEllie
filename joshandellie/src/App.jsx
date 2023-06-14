@@ -10,7 +10,6 @@ import { editable as e } from "@theatre/r3f";
 import { styles } from "./styles";
 import { motion } from "framer-motion";
 import CanvasLoader from "./Loader";
-// import Modal from "./Modal";
 
 import { Content } from "./sidebar";
 import { Sidebar } from "./Sidebar";
@@ -23,9 +22,8 @@ import { IconButton } from "@mui/material";
 import projectState from "./state.json";
 
 export default function App() {
-	// const sheet = getProject("Fly Through").sheet("Scene");
 	const sheet = getProject("Fly Through", { state: projectState }).sheet("Scene");
-	// const project = getProject("My Project", { state: projectState });
+
 	const [openModal, setOpenModal] = useState(false);
 	const [sideBar, setSideBar] = React.useState(false);
 	const [modal, setModal] = React.useState(false);
@@ -33,12 +31,7 @@ export default function App() {
 	return (
 		<div className="relative z-0 ">
 			<div className="bg-transparent bg-cover bg-no-repeat bg-center">
-				{/* <div className="bg-rose-500 bg-cover bg-no-repeat bg-center"> */}
 				<section className="relative w-full h-screen mx-auto bg-[transparent]">
-					{/* <Yodal {...{ modal, setModal }} /> */}
-
-					{/* Name and Pole Thing */}
-					{/* « */}
 					<div className={"fixed xs:bottom-10 bottom-2 w-full h-[100px] flex justify-end items-center pr-10"}>
 						<div>
 							<h1 className={`text-[40px] sm:text-[80px] text-black-gradient`}>.com</h1>
@@ -88,7 +81,7 @@ export default function App() {
 									<Scene />
 
 									<Gltf src="./models/scene4.glb" />
-									{/* <Gltf src="./scene529.glb" /> */}
+
 									<Gltf src="./models/ellie3.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} />
 									<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow onClick={(e) => window.alert("Wood Art Detail Page Coming Soon")} />
@@ -98,16 +91,15 @@ export default function App() {
 									<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
 									<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
 									<Gltf src="./models/email.glb" castShadow receiveShadow onClick={(e) => window.alert("Josh.T.Garvey@gmail.com | email forum coming soon")} />
-									{/* <Gltf src="./nametag.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} /> */}
 								</SheetProvider>
 							</ScrollControls>
 						</Suspense>
 						<Preload all />
 					</Canvas>
 				</section>
-				{/* <Content {...{ sideBar, setSideBar, modal, setModal }} /> */}
+
 				<Sidebar z-10 {...{ sideBar, setSideBar }} />
-				{/* <Modal open={openModal} onClose={() => setOpenModal(false)} /> */}
+
 				<Yodal {...{ modal, setModal }} />
 			</div>
 		</div>

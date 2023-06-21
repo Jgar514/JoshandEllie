@@ -11,7 +11,7 @@ import { styles } from "./styles";
 import { motion } from "framer-motion";
 import CanvasLoader from "./Loader";
 
-import { Content } from "./sidebar";
+// import { Content } from "./sidebar";
 import { Sidebar } from "./Sidebar";
 import { Yodal } from "./Sidebar";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";

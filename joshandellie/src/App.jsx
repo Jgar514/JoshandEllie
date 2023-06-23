@@ -20,6 +20,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { IconButton } from "@mui/material";
 import projectState from "./state.json";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
 	const sheet = getProject("Fly Through", { state: projectState }).sheet("Scene");
@@ -48,7 +49,7 @@ export default function App() {
 
 						<div className={'"absolute ml-10'}>
 							<h1 className={`${styles.heroHeadText} text-black-gradient`}>
-								Joshua
+								Joshu
 								<br />
 								Garvey
 							</h1>
@@ -85,8 +86,8 @@ export default function App() {
 									<Gltf src="./models/ellie3.glb" castShadow receiveShadow onClick={() => setModal((moda) => !modal)} />
 									<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow onClick={(e) => window.alert("Wood Art Detail Page Coming Soon")} />
-									<Gltf src="./models/projects.glb" castShadow receiveShadow onClick={() => setOpenModal(true)} />
-									<Gltf src="./models/screenprojects1.glb" castShadow receiveShadow onClick={(e) => window.alert("Project Detail Page Coming Soon")} />
+									<Gltf src="./models/projects.glb" castShadow receiveShadow />
+									<Gltf src="./models/screenprojects1.glb" castShadow receiveShadow onClick={redirect} />
 									<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
 									<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
 									<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
@@ -104,6 +105,9 @@ export default function App() {
 			</div>
 		</div>
 	);
+}
+function redirect() {
+	location.replace("https://jgar514.github.io/react-project/");
 }
 
 function Scene() {

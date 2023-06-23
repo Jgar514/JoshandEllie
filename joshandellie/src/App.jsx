@@ -49,7 +49,7 @@ export default function App() {
 
 						<div className={'"absolute ml-10'}>
 							<h1 className={`${styles.heroHeadText} text-black-gradient`}>
-								Joshu
+								Joshua
 								<br />
 								Garvey
 							</h1>

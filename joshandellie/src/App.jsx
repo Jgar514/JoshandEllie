@@ -87,7 +87,7 @@ export default function App() {
 									<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow onClick={(e) => window.alert("Wood Art Detail Page Coming Soon")} />
 									<Gltf src="./models/projects.glb" castShadow receiveShadow />
-									<Gltf src="./models/screenprojects1.glb" castShadow receiveShadow onClick={redirect} />
+									<Gltf src="./models/projectscreen.glb" castShadow receiveShadow onClick={redirect} />
 									<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
 									<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
 									<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />

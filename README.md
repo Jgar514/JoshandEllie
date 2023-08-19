@@ -2,10 +2,9 @@
 
 <div align="center">
 
-
 ## Immersive 3D Portfolio
 
-![Alt text](https://github.com/Jgar514/JoshandEllie/blob/main/3dgif.gif.gif)
+![Alt text](https://github.com/Jgar514/JoshandEllie/blob/main/3dgif.gif)
 
 <!-- <img width="400" alt="Screenshot 2023-07-02 at 12 05 25 AM" src="https://github.com/Jgar514/subdomain_popup/blob/main/popup.gif"> -->
 

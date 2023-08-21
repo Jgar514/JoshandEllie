@@ -1,6 +1,6 @@
 import React, { Suspense, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Gltf, OrbitControls, ScrollControls, useScroll, Preload } from "@react-three/drei";
+import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text } from "@react-three/drei";
 import { getProject, val } from "@theatre/core";
 
 import { SheetProvider, PerspectiveCamera, useCurrentSheet } from "@theatre/r3f";
@@ -106,6 +106,7 @@ export default function App() {
 		</div>
 	);
 }
+
 function redirect() {
 	location.replace("https://jgar514.github.io/react-project/");
 }

@@ -21,9 +21,11 @@
 		"@theatre/studio": "^0.6.1",
 		"framer-motion": "^9.0.7",
 		"react": "^18.2.0",
+		"react-code-blocks": "^0.0.9-0",
 		"react-dom": "^18.2.0",
 		"react-router-dom": "^6.13.0",
-		"three": "^0.152.2"
+		"three": "^0.152.2",
+		"troika-3d-text": "^0.47.2"
 	},
 	"devDependencies": {
 		"@types/react": "^18.0.28",

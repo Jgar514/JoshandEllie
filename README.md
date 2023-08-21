@@ -4,8 +4,6 @@
 
 ## Immersive 3D Portfolio
 
-![Alt text](https://github.com/Jgar514/JoshandEllie/blob/main/3dgif.gif)
-
 <!-- <img width="400" alt="Screenshot 2023-07-02 at 12 05 25 AM" src="https://github.com/Jgar514/subdomain_popup/blob/main/popup.gif"> -->
 
 <!-- [Link text](https://website-name.com) -->
@@ -24,6 +22,8 @@ function test() {
 ### About
 
 The project is a website that incorporates a 3D model and interactive scrolling functionality. The main purpose of the website is to provide a visually engaging user experience by allowing users to navigate through a 3D scene as they scroll down the page.
+
+![Alt text](https://github.com/Jgar514/JoshandEllie/blob/main/3dgif.gif)
 
 ## Technologies
 

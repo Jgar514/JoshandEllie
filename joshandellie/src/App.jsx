@@ -108,7 +108,7 @@ export default function App() {
 }
 
 function redirect() {
-	location.replace("https://jgar514.github.io/react-project/");
+	location.replace("https://projects.joshuagarvey.com/");
 }
 
 function Scene() {

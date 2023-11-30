@@ -26,7 +26,7 @@ const ImageCarousel = ({ isOpen, closeCarousel, selectedImage, setSelectedImage 
 
 	return (
 		<div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75 z-50">
-			<div className="relative max-w-screen-md h-5/6 pt-2 px-2 rounded-lg shadow-lg bg-white w-screen">
+			<div className="relative max-w-screen-md h-4/6 pt-2 pb-8 px-2 rounded-lg shadow-lg bg-white w-screen">
 				<div className="h-12 flex justify-end w-full">
 					<div className="border-2 border-red-500 bg-white flex items-center pb-2 rounded-full px-2">
 						<button className="text-red-500 text-6xl hover:text-black h-fit" onClick={closeCarousel}>
@@ -34,19 +34,19 @@ const ImageCarousel = ({ isOpen, closeCarousel, selectedImage, setSelectedImage 
 						</button>
 					</div>
 				</div>
-				<div className="flex flex-col gap-6 items-center justify-center h-fit bg-red-50 pb-10">
+				<div className="flex flex-col gap-6 items-center justify-center h-fit  pb-10">
 					<div className="flex-grow flex items-center justify-center">
 						<img src={images[selectedImage]} alt={`Image ${selectedImage + 1}`} style={{ maxWidth: "320px", maxHeight: "320px", width: "auto", height: "auto" }} />
 					</div>
-					<div className="flex gap-8">
+					<div className="flex gap-8 w-full justify-center ">
 						{hasPreviousPhoto && (
-							<button className="text-white h-fit w-fit text-lg py-2 px-4 rounded-md bg-blue-500 hover:bg-blue-600" onClick={() => setSelectedImage(selectedImage - 1)}>
+							<button className="text-white h-fit w-fit text-lg py-2 px-4 rounded-md bg-black hover:bg-black" onClick={() => setSelectedImage(selectedImage - 1)}>
 								&lt; Prev
 							</button>
 						)}
 
 						{hasNextPhoto && (
-							<button className="text-white h-fit w-fit text-lg py-2 px-4 rounded-md bg-blue-500 hover:bg-blue-600" onClick={() => setSelectedImage(selectedImage + 1)}>
+							<button className="text-white h-fit w-fit text-lg py-2 px-4 rounded-md bg-black hover:bg-black" onClick={() => setSelectedImage(selectedImage + 1)}>
 								Next &gt;
 							</button>
 						)}

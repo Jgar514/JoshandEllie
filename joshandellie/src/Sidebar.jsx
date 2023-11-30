@@ -61,7 +61,10 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							Email:{" "}
 							<CopyToClipboard text={email} onCopy={onCopyEmail} className="inline-block cursor-pointer">
 								<span>
-									<a href={`mailto:${email}`}>{email}</a> <MdContentCopy className="text-xl inline mx-2" />
+									<a className="text-xl" href={`mailto:${email}`}>
+										{email}
+									</a>{" "}
+									<MdContentCopy className="text-xl inline mx-2" />
 								</span>
 							</CopyToClipboard>
 							{isEmailCopied && <span className="text-[#D42920] ml-2">Copied!</span>}
@@ -71,7 +74,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							GitHub: <br />
 							<CopyToClipboard text={githubLink} onCopy={onCopyGitHub} className="inline-block cursor-pointer">
 								<span>
-									<a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-green-700">
+									<a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-green-700 text-xl">
 										github.com/Jgar514
 									</a>{" "}
 									<MdContentCopy className="text-xl inline text-green-700 mx-4" />
@@ -93,11 +96,18 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							{isLinkedInCopied && <span className="text-blue-700 ml-2">Copied!</span>}
 						</h2>
 
-						<h2 className="text-[#F9c22c] pt-3 h-fit">Awards and Accolades</h2>
-						<p className="text-black h-fit">
+						<h2 className="text-[#F9c22c] text-lg pt-3 h-fit underline">Certificates, Awards, Accomplishments</h2>
+						<p className="text-black h-fit text-sm">
+							-Mendix Rapid Developer Certificate
+							<br />
+							-Responsive Web Design Certificate
+							<br />
 							-Most likely to be famous 5th grade superlative
 							<br />
 							-2004 County Basketball Champion
+							<br />
+							<br />
+							<span className="text-red-600 pl-4 text-xs">// Coming Soon: Associate Of Arts Degree</span>
 						</p>
 					</motion.div>
 					<motion.div

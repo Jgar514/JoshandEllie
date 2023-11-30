@@ -26,12 +26,19 @@ function Tabbox() {
 					{/* TAB 1 Contents */}
 					{currentTabIndex === 0 && (
 						<Box className=" bg-white " sx={{ p: 0 }}>
-							<div className="flex flex-col  w-full px-2 lg:px-6  overflow-y-scroll pb-12">
+							<div className="flex flex-col w-full px-2 lg:px-6 overflow-y-scroll pb-12">
 								{/* card */}
-								<MenuCard heading={"Currently working on..."} img={blackline} title="Blackline Contracting" description="A general contracting company website." />
+								<a href="https://blackline.joshuagarvey.com" target="_blank" rel="noopener noreferrer">
+									<MenuCard heading={"Currently working on..."} img={blackline} title="Blackline Contracting" description="A general contracting company website." />
+								</a>
 
-								<MenuCard heading={"Mobile User Interface.."} img={mobileui} title="Mobile UI" description="A user interface for mobile devices" />
-								<MenuCard heading={"My favorite..."} img={portfolio} title="JoshuaGarvey.com" description="An immersive 3D web developer portfolio." />
+								<a href="https://ui.joshuagarvey.com" target="_blank" rel="noopener noreferrer">
+									<MenuCard heading={"Mobile User Interface.."} img={mobileui} title="Mobile UI" description="A user interface for mobile devices" />
+								</a>
+
+								<a href="https://joshuagarvey.com" target="_blank" rel="noopener noreferrer">
+									<MenuCard heading={"My favorite..."} img={portfolio} title="JoshuaGarvey.com" description="An immersive 3D web developer portfolio." />
+								</a>
 							</div>
 						</Box>
 					)}
@@ -46,7 +53,8 @@ function Tabbox() {
 					{/* TAB 3 Contents */}
 					{currentTabIndex === 2 && (
 						<Box sx={{ p: 1 }}>
-							<Typography variant="h5">One of the top young rising developers in the world.</Typography>
+							<h1 className="h-fit text-2xl">About Me:</h1>
+							<h1 className="text-xl">One of the top young rising web developers in the world.</h1>
 						</Box>
 					)}
 				</div>

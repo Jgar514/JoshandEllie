@@ -87,7 +87,7 @@ export default function App() {
 
 				{/* menu.icon */}
 
-				<div className="border-gray-50 border-2 absolute top-2 right-4 z-40 h-auto flex items-center">
+				<div className="border-gray-50 lg:mr-16 border-2 absolute top-2 right-4 z-40 h-auto flex items-center">
 					<IconButton onClick={handleMenuToggle} style={{ color: "transparent" }}>
 						<div className="flex flex-col">
 							<span className="h-2 w-12 mb-2 bg-black border border-white"></span>
@@ -118,8 +118,8 @@ export default function App() {
 					</div>
 
 					{/* .com */}
-					<div className={"fixed bottom-0 w-full h-[100px] flex justify-end items-center pr-5 md:mr-10"}>
-						<h1 className="text-4xl md:text-6xl  lg:text-7xl text-black-gradient font-bold">.com</h1>
+					<div className={"fixed bottom-0 w-full h-[100px] flex justify-end items-center pr-5 lg:mr-16   md:mr-10"}>
+						<h1 className="text-4xl md:text-6xl  lg:text-7xl text-black-gradient font-bold lg:pr-12">.com</h1>
 					</div>
 				</div>
 

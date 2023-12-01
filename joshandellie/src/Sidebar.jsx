@@ -87,7 +87,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							LinkedIn:{" "}
 							<CopyToClipboard text={linkedinLink} onCopy={onCopyLinkedIn} className="inline-block cursor-pointer">
 								<span>
-									<a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="text-blue-700">
+									<a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="text-blue-700 text-xl">
 										linkedin.com/in/josh-garvey/
 									</a>{" "}
 									<MdContentCopy className="text-xl inline text-blue-700 mx-2" />

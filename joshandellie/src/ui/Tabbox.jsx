@@ -6,7 +6,6 @@ import portfolio from "../assets/3d.png";
 import MenuCard from "../MenuCard";
 import Modal2 from "./Modal2";
 
-import DropdownAccordion from "./accordion";
 import Info from "./Info";
 function Tabbox() {
 	const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -17,9 +16,6 @@ function Tabbox() {
 	};
 	const [isOpen, setIsOpen] = useState(false);
 
-	const toggleAccordion = () => {
-		setIsOpen(!isOpen);
-	};
 	const contact = [
 		{ text: "Mail me", link: "mailto:Josh.T.Garvey@gmail.com" },
 		{ text: "GitHub", link: "https://github.com/jgar514" },

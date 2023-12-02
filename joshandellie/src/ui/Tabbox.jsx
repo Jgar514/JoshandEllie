@@ -5,7 +5,9 @@ import mobileui from "../assets/mobileui.png";
 import portfolio from "../assets/3d.png";
 import MenuCard from "../MenuCard";
 import Modal2 from "./Modal2";
-import Copiable from "./Copiable";
+
+import DropdownAccordion from "./accordion";
+import Info from "./Info";
 function Tabbox() {
 	const [currentTabIndex, setCurrentTabIndex] = useState(0);
 
@@ -13,6 +15,17 @@ function Tabbox() {
 		console.log(tabIndex);
 		setCurrentTabIndex(tabIndex);
 	};
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleAccordion = () => {
+		setIsOpen(!isOpen);
+	};
+	const contact = [
+		{ text: "Mail me", link: "mailto:Josh.T.Garvey@gmail.com" },
+		{ text: "GitHub", link: "https://github.com/jgar514" },
+		{ text: "LinkedIn", link: "https://www.linkedin.com/in/josh-garvey" },
+		// Add more items as needed
+	];
 
 	return (
 		<React.Fragment>
@@ -46,15 +59,20 @@ function Tabbox() {
 					{/* TAB 2 Contents */}
 					{currentTabIndex === 1 && (
 						<Box sx={{ p: 0 }}>
-							<Copiable />
+							<Info />
 						</Box>
 					)}
 
 					{/* TAB 3 Contents */}
 					{currentTabIndex === 2 && (
-						<Box sx={{ p: 1 }}>
-							<h1 className="h-fit text-2xl">About Me:</h1>
-							<h1 className="text-xl">One of the top young rising web developers in the world.</h1>
+						<Box sx={{ p: 3 }}>
+							<div
+								className="
+							flex-col flex gap-2"
+							>
+								<h1 className="h-fit lg:text-3xl text-2xl underline">About Me:</h1>
+								<h1 className="text-xl lg:text-2xl h-fit">One of the top young rising web developers in the world.</h1>
+							</div>
 						</Box>
 					)}
 				</div>

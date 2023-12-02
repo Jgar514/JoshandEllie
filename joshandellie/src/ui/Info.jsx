@@ -1,29 +1,194 @@
-import React from "react";
-import Copiable from "./Copiable";
+import React, { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { MdContentCopy } from "react-icons/md";
 
 function Info() {
-	return (
-		<div className="h-full bg-gray-100 flex flex-col ">
-			<div className="bg-gray-100 flex flex-row h-1/6 justify-between items-center">
-				{/* <h1 className="text-xl h-fit ">Josh.T.Garvey@gmail.com</h1> */}
+	const email = "josh.t.garvey@gmail.com";
+	const linkedInLink = "https://www.linkedin.com/in/josh-garvey/";
+	const websiteLinks = [
+		"https://blackline.joshuagarvey.com/",
+		"https://ui.joshuagarvey.com/",
+		"https://popup.joshuagarvey.com/",
+		"https://joshuagarvey.com/",
+		// Add more websites as needed
+	];
 
-				<Copiable />
+	const skills = ["React", "JavaScript", "CSS", "HTML", "Tailwind CSS", "Web Development"];
+
+	const employerInfo = {
+		workHistoryLink: "https://github.com/Jgar514/workhistory/blob/main/README.md",
+		resumeLink: "https://github.com/Jgar514/RESUME",
+	};
+	const linkedinProfile = "https://www.linkedin.com/in/josh-garvey/";
+
+	const [copiedEmail, setCopiedEmail] = useState(false);
+	const [copiedLinkedIn, setCopiedLinkedIn] = useState(false);
+	const [copiedWebsite, setCopiedWebsite] = useState(false);
+	const [copiedSkill, setCopiedSkill] = useState(false);
+	const [copiedEmployer, setCopiedEmployer] = useState(false);
+	const [isContactDropdownOpen, setContactDropdownOpen] = useState(false);
+	const [isWebsitesDropdownOpen, setWebsitesDropdownOpen] = useState(false);
+	const [isSkillsDropdownOpen, setSkillsDropdownOpen] = useState(false);
+	const [isEmployerDropdownOpen, setEmployerDropdownOpen] = useState(false);
+
+	const handleCopyEmail = () => {
+		setCopiedEmail(true);
+		setTimeout(() => setCopiedEmail(false), 2000);
+	};
+
+	const handleCopyLinkedIn = () => {
+		setCopiedLinkedIn(true);
+		setTimeout(() => setCopiedLinkedIn(false), 2000);
+	};
+
+	const handleCopyWebsite = () => {
+		setCopiedWebsite(true);
+		setTimeout(() => setCopiedWebsite(false), 2000);
+	};
+
+	const handleCopySkill = () => {
+		setCopiedSkill(true);
+		setTimeout(() => setCopiedSkill(false), 2000);
+	};
+
+	const handleCopyEmployer = () => {
+		setCopiedEmployer(true);
+		setTimeout(() => setCopiedEmployer(false), 2000);
+	};
+
+	const toggleContactDropdown = () => {
+		setContactDropdownOpen(!isContactDropdownOpen);
+		setWebsitesDropdownOpen(false);
+		setSkillsDropdownOpen(false);
+		setEmployerDropdownOpen(false);
+	};
+
+	const toggleWebsitesDropdown = () => {
+		setWebsitesDropdownOpen(!isWebsitesDropdownOpen);
+		setContactDropdownOpen(false);
+		setSkillsDropdownOpen(false);
+		setEmployerDropdownOpen(false);
+	};
+
+	const toggleSkillsDropdown = () => {
+		setSkillsDropdownOpen(!isSkillsDropdownOpen);
+		setContactDropdownOpen(false);
+		setWebsitesDropdownOpen(false);
+		setEmployerDropdownOpen(false);
+	};
+
+	const toggleEmployerDropdown = () => {
+		setEmployerDropdownOpen(!isEmployerDropdownOpen);
+		setContactDropdownOpen(false);
+		setWebsitesDropdownOpen(false);
+		setSkillsDropdownOpen(false);
+	};
+
+	return (
+		<div className="h-full bg-gray-100 flex flex-col gap-2 overflow-y-auto">
+			<div className="bg-gray-50 h-fit">
+				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2 " onClick={toggleContactDropdown}>
+					Contact
+				</h1>
+				{isContactDropdownOpen && (
+					<div className="h-fit flex flex-col pl-6 py-4 gap-2 text-lg ">
+						{/* Email section */}
+						<CopyToClipboard text={`mailto:${email}`} onCopy={handleCopyEmail}>
+							<div className="flex items-center">
+								<a href={`mailto:${email}`} className="text-blue-500 underline">
+									josh.t.garvey@gmail.com
+								</a>
+								<button className="ml-2 p-1" title="Copy to Clipboard">
+									<MdContentCopy />
+								</button>
+							</div>
+						</CopyToClipboard>
+						{copiedEmail && <p className="text-green-500">Copied to clipboard!</p>}
+
+						{/* LinkedIn section */}
+						<CopyToClipboard text={linkedinProfile} onCopy={handleCopyLinkedIn}>
+							<div className="flex items-center ">
+								<a href={linkedinProfile} className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
+									linkedin.com/in/josh-garvey/
+								</a>
+								<button className="ml-2 p-1" title="Copy to Clipboard">
+									<MdContentCopy />
+								</button>
+							</div>
+						</CopyToClipboard>
+						{copiedLinkedIn && <p className="text-green-500">LinkedIn link copied to clipboard!</p>}
+					</div>
+				)}
 			</div>
-			<div className="bg-white flex flex-col h-4/6 justify-between items-center">
-				<p className="text-sm">
-					<span className="underline">The challenge:</span>
-					<br />
-					<span className="text-xs"> to deliver a good amount of information while keeping the height of the application equal to one mobile device. No vertical scrolling.</span>
-				</p>
-				<p className="text-sm">
-					<span className="underline">Inspiration</span>
-					<br />
-					<span className="text-xs">
-						-simplistic profile layout similiar to github's approach.
-						<br /> -utilizes tabs and sliding cards similiar to facebook on mobile devices.
-						<br /> -The bottom resembles the bottom of an iphone screen.
-					</span>
-				</p>
+			<div className="bg-gray-50 h-fit">
+				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2 " onClick={toggleWebsitesDropdown}>
+					Websites
+				</h1>
+				{isWebsitesDropdownOpen && (
+					<div className="h-fit flex flex-col  pl-6 py-4 gap-2 text-lg">
+						<ul>
+							{websiteLinks.map((website, index) => (
+								<li key={index}>
+									<CopyToClipboard text={website} onCopy={handleCopyWebsite}>
+										<div className="flex items-center py-2">
+											<a href={website} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+												{website}
+											</a>
+											<button className="ml-2 p-1" title="Copy to Clipboard">
+												<MdContentCopy />
+											</button>
+										</div>
+									</CopyToClipboard>
+								</li>
+							))}
+						</ul>
+						{copiedWebsite && <p className="text-green-500">Copied to clipboard!</p>}
+					</div>
+				)}
+			</div>
+			<div className="bg-gray-50 h-fit">
+				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2" onClick={toggleSkillsDropdown}>
+					Skills
+				</h1>
+				{isSkillsDropdownOpen && (
+					<div className="h-fit">
+						<ul>
+							{skills.map((skill, index) => (
+								<li key={index}>
+									<div className="flex items-center pl-8">
+										<span className="text-black">{skill}</span>
+										<button className="ml-2 p-1" title="Copy to Clipboard"></button>
+									</div>
+								</li>
+							))}
+						</ul>
+						{copiedSkill && <p className="text-green-500">Copied to clipboard!</p>}
+					</div>
+				)}
+			</div>
+			<div className="bg-gray-50 h-fit">
+				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2" onClick={toggleEmployerDropdown}>
+					Employer Info
+				</h1>
+				{isEmployerDropdownOpen && (
+					<div className="h-fit pl-8 flex flex-col gap-y-2 pt-2 text-lg">
+						<div className="items-center ">
+							<a href={employerInfo.workHistoryLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Work History
+							</a>
+							<button className="ml-2 p-1" title="Copy to Clipboard"></button>
+						</div>
+
+						<div className="flex items-center">
+							<a href={employerInfo.resumeLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Resume
+							</a>
+							<button className="ml-2 p-1" title="Copy to Clipboard"></button>
+						</div>
+
+						{copiedEmployer && <p className="text-green-500">Copied to clipboard!</p>}
+					</div>
+				)}
 			</div>
 		</div>
 	);

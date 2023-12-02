@@ -23,6 +23,8 @@ import windowImage from "./assets/window.png";
 import museImage from "./assets/muse.png";
 import ImageCarousel from "./ui/ImageCarousel";
 import Menu from "./ui/Menu";
+import Modal from "./ui/Modal";
+import { Cloud, Stars, Sky, Float } from "@react-three/drei";
 
 export default function App() {
 	// const sheet = getProject("Fly Through").sheet("Scene");
@@ -30,7 +32,7 @@ export default function App() {
 	const openEmailWindow = () => {
 		window.location.href = "mailto:Josh.T.Garvey@gmail.com";
 	};
-
+	const [showResumeModal, setShowResumeModal] = React.useState(false);
 	const [openModal, setOpenModal] = useState(false);
 	const [sideBar, setSideBar] = React.useState(false);
 	const [modal, setModal] = React.useState(false);
@@ -51,10 +53,13 @@ export default function App() {
 		setIsCarouselOpen(false);
 		setSelectedImage(null);
 	};
+	const handleResumeClick = () => {
+		setShowResumeModal(true);
+	};
 
 	return (
 		<div className="relative z-0 height-screen overflow-hidden ">
-			<section className="relative w-full h-screen mx-auto bg-white">
+			<section className="relative w-full h-screen mx-auto white">
 				{/* menu.opened */}
 
 				{isMenuOpen && (
@@ -157,10 +162,11 @@ export default function App() {
 									<SheetProvider sheet={sheet}>
 										<Scene />
 										<Gltf src="./models/scene4.glb" />
-										{/* <Gltf src="./models/resume.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} /> */}
+										<Gltf src="./models/resume.glb" castShadow receiveShadow onClick={handleResumeClick} />
 
 										{/* scene.ellie */}
 										<Gltf src="./models/ellie3.glb" castShadow receiveShadow onClick={() => openCarousel(0)} />
+
 										{/* scene.contactcard */}
 										<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
 										{/* scene.elephant*/}
@@ -169,10 +175,18 @@ export default function App() {
 										<Gltf src="./models/projects.glb" castShadow receiveShadow />
 										<Gltf src="./models/projectscreen.glb" castShadow receiveShadow onClick={redirect} />
 										{/* scene.socialicons */}
-										<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
-										<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
-										<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
-										<Gltf src="./models/email.glb" castShadow receiveShadow onClick={openEmailWindow} />
+										<Float
+											speed={8} // Animation speed, defaults to 1
+											rotationIntensity={0} // XYZ rotation intensity, defaults to 1
+											floatIntensity={0.5} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+											floatingRange={[0, 0.08]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
+										>
+											<Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
+											<Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
+											<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
+											<Gltf src="./models/email.glb" castShadow receiveShadow onClick={openEmailWindow} />
+										</Float>
+
 										{/* scene.end */}
 									</SheetProvider>
 								</ScrollControls>
@@ -188,6 +202,7 @@ export default function App() {
 				{/* No image thumbnails in this version */}
 
 				<ImageCarousel isOpen={isCarouselOpen} closeCarousel={closeCarousel} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
+				<Modal isOpen={showResumeModal} onClose={() => setShowResumeModal(false)} />
 			</div>
 		</div>
 	);
@@ -225,6 +240,10 @@ function Scene() {
 				<octahedronBufferGeometry args={[0.1, 0]} />
 				<meshPhongMaterial color="yellow" />
 			</e.mesh>
+			{/* <Sky distance={1000000} sunPosition={[0, 10, 0]} inclination={0} azimuth={0.25} /> */}
+			{/* 
+			<Cloud segments={40} bounds={[200, 300, 800]} volume={10} color="white" />
+			<Cloud seed={1} scale={1} volume={15} color="white" fade={100} /> */}
 
 			{/* <OrbitControls /> */}
 		</>

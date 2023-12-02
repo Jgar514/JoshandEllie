@@ -26,7 +26,7 @@ function ResumeNew() {
 			</div> */}
 			<div className="flex items-center justify-center  h-full ">
 				<Document file={pdf} className="w-full h-auto">
-					<Page pageNumber={1} scale={width > 786 ? 0.7 : 0.6} />
+					<Page pageNumber={1} scale={width > 786 ? 0.6 : 0.6} />
 				</Document>
 			</div>
 		</div>

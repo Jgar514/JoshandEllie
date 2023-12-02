@@ -124,7 +124,7 @@ export default function App() {
 				</div>
 
 				{/* SLIDER Animation*/}
-				<div className="absolute bottom-20 md:bottom-0 w-full    h-fit flex  flex-col gap-8 md:gap-2 text-lg justify-center items-center mb-[-14px] lg:mb-[-54px]">
+				<div className="absolute bottom-20 md:bottom-0 w-full    h-fit flex  flex-col gap-8 md:gap-2 text-lg justify-center items-center mb-[-30px] lg:mb-[-54px]">
 					<div className="text-3xl lg:text-4xl font-bold font-custom py-2 lg:pt-8 pt-4 ">Scroll</div>
 					<div className="w-[70px] h-[110px] rounded-3xl border-4 border-black  border-double flex justify-center items-start p-2 ">
 						<motion.div

@@ -118,24 +118,25 @@ export default function App() {
 					</div>
 
 					{/* .com */}
-					<div className={"fixed bottom-0 w-full h-[100px] flex justify-end items-center pr-5 lg:mr-14   md:mr-10"}>
+					<div className={"fixed bottom-20 w-full h-[100px] flex justify-end items-center pr-5 lg:mr-14   md:mr-10"}>
 						<h1 className="text-4xl md:text-6xl  lg:text-7xl text-black-gradient font-bold lg:pr-12">.com</h1>
 					</div>
 				</div>
 
 				{/* SLIDER Animation*/}
-				<div className="absolute bottom-40 md:bottom-12 w-full    h-fit flex justify-center items-center">
-					<div className="w-[35px] h-[74px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 ">
+				<div className="absolute bottom-20 md:bottom-0 w-full    h-fit flex  flex-col gap-8 md:gap-2 text-lg justify-center items-center mb-[-14px] lg:mb-[-54px]">
+					<div className="text-3xl lg:text-4xl font-bold font-custom py-2 lg:pt-8 pt-4 ">Scroll</div>
+					<div className="w-[70px] h-[110px] rounded-3xl border-4 border-black  border-double flex justify-center items-start p-2 ">
 						<motion.div
 							animate={{
-								y: [0, 24, 0],
+								y: [0, 30, 0],
 							}}
 							transition={{
 								duration: 1.5,
 								repeat: Infinity,
 								repeatType: "loop",
 							}}
-							className="w-6 h-4 rounded-full bg-secondary mb-1"
+							className="w-1/4 h-1/3 bg-black border-yellow-600 border-2 rounded-full  mb-1"
 						/>
 					</div>
 				</div>

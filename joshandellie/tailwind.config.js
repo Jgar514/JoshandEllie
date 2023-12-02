@@ -3,6 +3,10 @@ export default {
 	content: ["./src/**/*.{js,jsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				custom: ["Architects Daughter", "san-serif"],
+			},
+
 			colors: {
 				primary: "#050816",
 				secondary: "#d0312d",

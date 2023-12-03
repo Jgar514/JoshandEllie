@@ -17,7 +17,9 @@ function Info() {
 
 	const employerInfo = {
 		workHistoryLink: "https://github.com/Jgar514/workhistory/blob/main/README.md",
-		resumeLink: "https://github.com/Jgar514/RESUME",
+		resumeLinkMarkdown: "https://github.com/Jgar514/RESUME",
+		resumeLinkPdf: "https://drive.google.com/file/d/125oe7jPOPAGybF_Kn8je9KGgf4gwatBe/view?usp=sharing",
+		printableResumeLinkPdf: "https://drive.google.com/file/d/1aDU29hAbhEqe__ZWXHgDs_S87p-nqIci/view?usp=sharing",
 	};
 	const linkedinProfile = "https://www.linkedin.com/in/josh-garvey/";
 
@@ -171,22 +173,28 @@ function Info() {
 					Employer Info
 				</h1>
 				{isEmployerDropdownOpen && (
-					<div className="h-fit pl-8 flex flex-col gap-y-2 pt-2 text-lg">
+					<div className="h-full pl-8 flex flex-col gap-y-2 pt-2 text-base overflow-y-auto pb-6">
 						<div className="items-center ">
 							<a href={employerInfo.workHistoryLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
 								Work History
 							</a>
-							<button className="ml-2 p-1" title="Copy to Clipboard"></button>
 						</div>
 
-						<div className="flex items-center">
-							<a href={employerInfo.resumeLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-								Resume
+						<div className="items-center ">
+							<a href={employerInfo.printableResumeLinkPdf} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Resume(Full Links)
 							</a>
-							<button className="ml-2 p-1" title="Copy to Clipboard"></button>
 						</div>
-
-						{copiedEmployer && <p className="text-green-500">Copied to clipboard!</p>}
+						<div className="flex items-center">
+							<a href={employerInfo.resumeLinkMarkdown} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Resume(Markdown)
+							</a>
+						</div>
+						<div className="flex items-center">
+							<a href={employerInfo.resumeLinkPdf} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Resume(PDF)
+							</a>
+						</div>
 					</div>
 				)}
 			</div>

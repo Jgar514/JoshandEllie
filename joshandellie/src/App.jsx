@@ -2,7 +2,7 @@ import React, { Suspense, useState, useRef, useEffect } from "react";
 import Profile from "./ui/Profile";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text } from "@react-three/drei";
+import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text, MeshWobbleMaterial } from "@react-three/drei";
 import { getProject, val } from "@theatre/core";
 import { SheetProvider, PerspectiveCamera, useCurrentSheet } from "@theatre/r3f";
 import { editable as e } from "@theatre/r3f";
@@ -24,7 +24,9 @@ import museImage from "./assets/muse.png";
 import ImageCarousel from "./ui/ImageCarousel";
 import Menu from "./ui/Menu";
 import Modal from "./ui/Modal";
-import { Cloud, Stars, Sky, Float } from "@react-three/drei";
+import { Cloud, Stars, Sky, Float, Stage, SpotLight, Billboard, Text3D, useMatcapTexture, Circle } from "@react-three/drei";
+import Reboto from "./utils/Reboto.json";
+import { MeshBasicMaterial } from "three";
 
 export default function App() {
 	// const sheet = getProject("Fly Through").sheet("Scene");
@@ -56,7 +58,10 @@ export default function App() {
 	const handleResumeClick = () => {
 		setShowResumeModal(true);
 	};
+	const greenMaterial = new MeshBasicMaterial({ color: "white" });
+	const blackAndWhiteColors = ["black", "white"];
 
+	const gradientColors = ["white", "white"];
 	return (
 		<div className="relative z-0 height-screen overflow-hidden ">
 			<section className="relative w-full h-screen mx-auto white">
@@ -161,11 +166,14 @@ export default function App() {
 								<ScrollControls pages={15}>
 									<SheetProvider sheet={sheet}>
 										<Scene />
+
 										<Gltf src="./models/scene4.glb" />
+
 										<Gltf src="./models/resume.glb" castShadow receiveShadow onClick={handleResumeClick} />
 
 										{/* scene.ellie */}
-										<Gltf src="./models/ellie3.glb" castShadow receiveShadow onClick={() => openCarousel(0)} />
+
+										<Gltf src="./models/ellienolabel3.glb" castShadow receiveShadow onClick={() => openCarousel(0)} />
 
 										{/* scene.contactcard */}
 										<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
@@ -186,7 +194,59 @@ export default function App() {
 											<Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
 											<Gltf src="./models/email.glb" castShadow receiveShadow onClick={openEmailWindow} />
 										</Float>
+										<Billboard
+											follow={true}
+											lockX={false}
+											lockY={false}
+											lockZ={false}
+											position={[-5.5, 4.9, 0.4]} // Lock the rotation on the z axis (default=false)
+										>
+											<Text color={"Green"} fontSize={0.04}>
+												Resume
+											</Text>
+											<Circle
+												args={[0.02, 64]}
+												position={[-0.1, 0.01, 0]} // Adjust the position to place the circle below the text
+												// Rotate the circle to face upward
+											>
+												<meshBasicMaterial attach="material" color="green" />
+											</Circle>
+										</Billboard>
 
+										<Billboard
+											follow={true}
+											lockX={false}
+											lockY={false}
+											lockZ={false}
+											position={[3.3, 5.1, -2.4]} // Lock the rotation on the z axis (default=false)
+										>
+											<Text
+												font={Reboto}
+												color="white"
+												fontSize={0.4}
+												outlineWidth={0.02} // Adjust the width of the outline
+												outlineColor="black"
+											>
+												Ellie
+											</Text>
+										</Billboard>
+										<Billboard
+											follow={true}
+											lockX={false}
+											lockY={false}
+											lockZ={false}
+											position={[3.3, 4.8, -2.4]} // Lock the rotation on the z axis (default=false)
+										>
+											<Text
+												font={Reboto}
+												color="red"
+												fontSize={0.2}
+												outlineWidth={0.01} // Adjust the width of the outline
+												outlineColor="black"
+											>
+												//clickable
+											</Text>
+										</Billboard>
 										{/* scene.end */}
 									</SheetProvider>
 								</ScrollControls>
@@ -240,6 +300,7 @@ function Scene() {
 				<octahedronBufferGeometry args={[0.1, 0]} />
 				<meshPhongMaterial color="yellow" />
 			</e.mesh>
+
 			{/* <Sky distance={1000000} sunPosition={[0, 10, 0]} inclination={0} azimuth={0.25} /> */}
 			{/* 
 			<Cloud segments={40} bounds={[200, 300, 800]} volume={10} color="white" />

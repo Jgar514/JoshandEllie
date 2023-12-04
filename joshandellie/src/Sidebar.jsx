@@ -57,7 +57,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 						<h1 className="text-4xl h-fit capitalize leading-loose underline text-black">About</h1>
 						<p className="h-fit leading-relaxed text-black text-[18px]">My name is Josh and I am one of the top young rising web developers in the world. I'm 29 and I live in Annapolis, Maryland. I'm a brother to 4 and an uncle to 6.</p>
 
-						<h2 className="text-2xl text-[#D42920] pt-4 h-fit underline">
+						<h2 className="text-2xl text-black pt-4 h-fit underline">
 							Email:{" "}
 							<CopyToClipboard text={email} onCopy={onCopyEmail} className="inline-block cursor-pointer">
 								<span>

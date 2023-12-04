@@ -24,9 +24,8 @@ import museImage from "./assets/muse.png";
 import ImageCarousel from "./ui/ImageCarousel";
 import Menu from "./ui/Menu";
 import Modal from "./ui/Modal";
-import { Cloud, Stars, Sky, Float, Stage, SpotLight, Billboard, Text3D, useMatcapTexture, Circle } from "@react-three/drei";
+import { Cloud, Stars, Float, Stage, SpotLight, Billboard, Circle } from "@react-three/drei";
 import Reboto from "./utils/Reboto.json";
-import { MeshBasicMaterial } from "three";
 
 export default function App() {
 	// const sheet = getProject("Fly Through").sheet("Scene");
@@ -58,10 +57,7 @@ export default function App() {
 	const handleResumeClick = () => {
 		setShowResumeModal(true);
 	};
-	const greenMaterial = new MeshBasicMaterial({ color: "white" });
-	const blackAndWhiteColors = ["black", "white"];
 
-	const gradientColors = ["white", "white"];
 	return (
 		<div className="relative z-0 height-screen overflow-hidden ">
 			<section className="relative w-full h-screen mx-auto white">
@@ -168,7 +164,7 @@ export default function App() {
 										<Scene />
 
 										<Gltf src="./models/scene4.glb" />
-
+										<Gltf src="./models/rtb.glb" castShadow receiveShadow onClick={(e) => window.open("https://g.co/kgs/AW1mJL")} />
 										<Gltf src="./models/resume.glb" castShadow receiveShadow onClick={handleResumeClick} />
 
 										{/* scene.ellie */}

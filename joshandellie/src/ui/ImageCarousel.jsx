@@ -26,19 +26,19 @@ const ImageCarousel = ({ isOpen, closeCarousel, selectedImage, setSelectedImage 
 
 	return (
 		<div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-75 z-50">
-			<div className="relative max-w-screen-md h-4/6 pt-2 pb-8 px-2 rounded-lg shadow-lg bg-white w-screen">
+			<div className="relative max-w-screen-md h-4/6 pt-2 pb-8 px-2 rounded-lg shadow-lg  bg-transparent  w-screen flex-col items-center flex">
 				<div className="h-12 flex justify-end w-full">
-					<div className="border-2 border-red-500 bg-white flex items-center pb-2 rounded-full px-2">
+					<div className="border-2 border-red-500  bg-white flex items-center pb-2 rounded-full px-2">
 						<button className="text-red-500 text-6xl hover:text-black h-fit" onClick={closeCarousel}>
 							x
 						</button>
 					</div>
 				</div>
-				<div className="flex flex-col gap-6 items-center justify-center h-fit  pb-10">
+				<div className="flex flex-col gap-6 items-center justify-center h-fit  pb-0 bg-white py-2 w-fit px-6 lg:min-w-[400px] min-w-full">
 					<div className="flex-grow flex items-center justify-center">
 						<img src={images[selectedImage]} alt={`Image ${selectedImage + 1}`} style={{ maxWidth: "320px", maxHeight: "320px", width: "auto", height: "auto" }} />
 					</div>
-					<div className="flex gap-8 w-full justify-center ">
+					<div className="flex gap-8 w-full justify-center py-2 ">
 						{hasPreviousPhoto && (
 							<button className="text-white h-fit w-fit text-lg py-2 px-4 rounded-md bg-black hover:bg-black" onClick={() => setSelectedImage(selectedImage - 1)}>
 								&lt; Prev

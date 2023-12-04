@@ -107,7 +107,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							-2004 County Basketball Champion
 							<br />
 							<br />
-							<span className="text-red-600 pl-4 text-xs">// Coming Soon: Associate Of Arts Degree</span>
+							<span className="text-red-600 pl-4 text-sm">// Coming December 12: Associate Of Arts Degree</span>
 						</p>
 					</motion.div>
 					<motion.div

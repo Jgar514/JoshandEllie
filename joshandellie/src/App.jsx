@@ -162,7 +162,7 @@ export default function App() {
 									<Scene />
 
 									<Gltf src="./models/scene4.glb" />
-									<Gltf src="./models/rtb.glb" castShadow receiveShadow onClick={(e) => window.open("https://g.co/kgs/AW1mJL")} />
+									<Gltf src="./models/rtb.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.raisingthebarelectric.com/")} />
 									<Gltf src="./models/resume.glb" castShadow receiveShadow onClick={handleResumeClick} />
 
 									{/* scene.ellie */}

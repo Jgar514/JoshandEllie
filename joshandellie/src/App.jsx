@@ -148,7 +148,7 @@ export default function App() {
 
 				{/* Canvas and GLTF models */}
 
-				<div className="w-full  absolute top-0 h-full   z-20 border-black">
+				<div className="w-full  absolute top-0 h-screen   z-20 border-black">
 					<Canvas
 						gl={{ preserveDrawingBuffer: true }}
 						style={{ width: "100%", height: "100%" }}

@@ -87,7 +87,7 @@ function Info() {
 	};
 
 	return (
-		<div className="h-full bg-gray-100 flex flex-col gap-2 overflow-y-auto">
+		<div className="h-full bg-gray-100 flex flex-col gap-2 overflow-y-auto w-full">
 			<div className="bg-gray-50 h-fit">
 				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2 " onClick={toggleContactDropdown}>
 					Contact

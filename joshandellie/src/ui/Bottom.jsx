@@ -7,7 +7,7 @@ function Bottom() {
 		window.open(url, "_blank", "noreferrer");
 	};
 	return (
-		<div className=" bg-transparent h-1/6 flex flex-row border-black border-t-2 border-b-2 flex-wrap items-center justify-center p-2  w-full ">
+		<div className="  flex flex-row border-black border-t-2 border-b-2 flex-wrap items-center justify-center p-2  w-full ">
 			<div className="bg-yellow2  lg:bg-yellow2 border-2 border-black w-full rounded-3xl items-center  overflow-hidden    flex justify-center h-full px-0 z-40">
 				<div className="text-6xl w-full flex items-center justify-center gap-8 py-0 px-4 ">
 					<button role="link" onClick={() => openInNewTab("https://github.com/Jgar514")}>

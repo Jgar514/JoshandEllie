@@ -19,16 +19,15 @@ function ResumeNew() {
 	}, []);
 
 	return (
-		<div className="flex flex-col items-center h-full   ">
+		<div className="flex    ">
 			{/* <div className="h-fit flex bg-blue-200 justify-end p-2 w-full ">
 				<AiOutlineDownload />
 				<p>Download</p>
 			</div> */}
-			<div className="flex items-center justify-center  h-full ">
-				<Document file={pdf} className="w-full h-auto">
-					<Page pageNumber={1} scale={width > 786 ? 0.7 : 0.6} />
-				</Document>
-			</div>
+
+			<Document file={pdf} className="w-full h-auto">
+				<Page pageNumber={1} scale={width > 786 ? 0.7 : 0.6} />
+			</Document>
 		</div>
 	);
 }

@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import muse from "./assets/muse.png";
 
-export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
+export function Sidebar({ sideBar = false, setSideBar = () => { } }) {
 	const email = "Josh.T.Garvey@gmail.com";
 	const githubLink = "https://github.com/Jgar514"; // Replace with your GitHub link
 	const linkedinLink = "https://www.linkedin.com/in/josh-garvey/"; // Replace with your LinkedIn link
@@ -107,7 +107,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => {} }) {
 							-2004 County Basketball Champion
 							<br />
 							<br />
-							<span className="text-red-600 pl-4 text-sm">// Coming December 12: Associate Of Arts Degree</span>
+							<span className="text-green-600 pl-0 text-lg font-bold">Associate Of Arts Degree - Dec. 2023</span>
 						</p>
 					</motion.div>
 					<motion.div

@@ -58,7 +58,7 @@ export function Sidebar({ sideBar = false, setSideBar = () => { } }) {
 						<p className="h-fit leading-relaxed text-black text-[18px]">My name is Josh and I am one of the top young rising web developers in the world. I'm 29 and I live in Annapolis, Maryland. I'm a brother to 4 and an uncle to 6.</p>
 
 						<h2 className="text-2xl text-black pt-4 h-fit underline">
-							Email:{" "}
+							Email: <br />
 							<CopyToClipboard text={email} onCopy={onCopyEmail} className="inline-block cursor-pointer">
 								<span>
 									<a className="text-xl" href={`mailto:${email}`}>

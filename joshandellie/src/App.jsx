@@ -175,7 +175,9 @@ export default function App() {
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow />
 									{/* scene.computer */}
 									<Gltf src="./models/projects.glb" castShadow receiveShadow />
-									<Gltf src="./models/projectscreen.glb" castShadow receiveShadow onClick={redirect} />
+									{/* <Gltf src="./models/projectscreen.glb" castShadow receiveShadow onClick={redirect} /> */}
+									<Gltf src="./models/projectscreen.glb" castShadow receiveShadow
+										onClick={handleMenuToggle} />
 									{/* scene.socialicons */}
 									<Float
 										speed={8} // Animation speed, defaults to 1
@@ -201,7 +203,7 @@ export default function App() {
 										<Circle
 											args={[0.02, 64]}
 											position={[-0.1, 0.01, 0]} // Adjust the position to place the circle below the text
-											// Rotate the circle to face upward
+										// Rotate the circle to face upward
 										>
 											<meshBasicMaterial attach="material" color="green" />
 										</Circle>

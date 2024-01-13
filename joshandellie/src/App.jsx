@@ -84,7 +84,7 @@ export default function App() {
 					// 		Close Menu
 					// 	</button>
 					// </div>
-					<div className={`fixed ${isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"} flex flex-col items-top h-full top-0 right-0 w-full md:w-1/2 border-2 border-black transition-all duration-300 ease-in-out transform z-40 bg-white lg:w-[600px]`}>
+					<div className={`fixed ${isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"} flex flex-col items-top h-full top-0 right-0 w-full md:w-1/2 border-2 border-black transition-all duration-300 ease-in-out transform z-40 bg-gray-100 lg:w-[600px]`}>
 						<Menu />
 					</div>
 				)}
@@ -174,9 +174,9 @@ export default function App() {
 									{/* scene.elephant*/}
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow />
 									{/* scene.computer */}
-									<Gltf src="./models/projects.glb" castShadow receiveShadow />
+									{/* <Gltf src="./models/projects.glb" castShadow receiveShadow /> */}
 									{/* <Gltf src="./models/projectscreen.glb" castShadow receiveShadow onClick={redirect} /> */}
-									<Gltf src="./models/projectscreen.glb" castShadow receiveShadow
+									<Gltf src="./models/showsprojects.glb" castShadow receiveShadow
 										onClick={handleMenuToggle} />
 									{/* scene.socialicons */}
 									<Float

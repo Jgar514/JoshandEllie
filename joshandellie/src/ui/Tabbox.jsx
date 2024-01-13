@@ -25,7 +25,7 @@ function Tabbox() {
 
 	return (
 		<React.Fragment>
-			<div className=" border-b-0  pb-0  text-black drop-shadow  h-full w-full">
+			<div className=" border-b-0  pb-0  text-black drop-shadow  h-full w-full bg-gray-50">
 				<Tabs className="h-10 border-b-2 border-black" value={currentTabIndex} onChange={handleTabChange}>
 					<Tab label="Projects" />
 					<Tab label="Info" />

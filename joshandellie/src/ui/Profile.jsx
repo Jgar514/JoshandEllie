@@ -5,10 +5,10 @@ import Quote from "./Quotes";
 
 function Profile() {
 	return (
-		<div className="h-[100px] flex flex-col py-2">
+		<div className="h-[100px] flex flex-col pt-2">
 			{/* propic */}
 			<div className="flex h-full">
-				<div className="bg-white gap-2 w-full flex p-2 justify-start">
+				<div className=" gap-2 w-full flex p-2 justify-start">
 					<img src={propic} className=" rounded-full bg-white h-full w-auto mx-2 border-2  border-black " />
 
 					{/* name and status */}

@@ -252,7 +252,7 @@ export default function App() {
 				</div>
 			</section>
 
-			<Sidebar className="z-50" {...{ sideBar, setSideBar }} />
+			<Sidebar className="z-50 h-screen" {...{ sideBar, setSideBar }} />
 
 			{/* No image thumbnails in this version */}
 

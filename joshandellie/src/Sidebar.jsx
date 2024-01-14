@@ -51,64 +51,68 @@ export function Sidebar({ sideBar = false, setSideBar = () => { } }) {
 						transition={{ type: "spring", bounce: 0, duration: 0.4 }}
 						className="fixed bg-[#FBF3D9]  text-white shadow-lg top-0 right-0 w-full max-w-sm h-screen p-5 z-50"
 					>
-						<button onClick={() => setSideBar((sideBar) => !sideBar)} className="bg-white text-black h-8 w-8 block mb-2 rounded-full">
-							&times;
-						</button>
-						<h1 className="text-4xl h-fit capitalize leading-loose underline text-black">About</h1>
-						<p className="h-fit leading-relaxed text-black text-[18px]">My name is Josh and I am one of the top young rising web developers in the world. I'm 29 and I live in Annapolis, Maryland. I'm a brother to 4 and an uncle to 6.</p>
+						<div className="flex flex-col h-full ">
+							<div className="flex flex-row gap-6">
+								<button onClick={() => setSideBar((sideBar) => !sideBar)} className="bg-white text-black h-10 w-10 block mb-2 rounded-full font-bold border-red-400 border-2">
+									&times;
+								</button>
+								<h1 className="text-4xl h-fit capitalize leading-loose underline text-black ">About</h1>
+							</div>
+							<p className="h-fit  text-black text-[18px]">My name is Josh and I am one of the top young rising web developers in the world. I'm 29 and I live in Annapolis, Maryland. I'm a brother to 4 and an uncle to 6.</p>
 
-						<h2 className="text-2xl text-black pt-4 h-fit underline">
-							Email: <br />
-							<CopyToClipboard text={email} onCopy={onCopyEmail} className="inline-block cursor-pointer">
-								<span>
-									<a className="text-xl" href={`mailto:${email}`}>
-										{email}
-									</a>{" "}
-									<MdContentCopy className="text-xl inline mx-2" />
-								</span>
-							</CopyToClipboard>
-							{isEmailCopied && <span className="text-[#D42920] ml-2">Copied!</span>}
-						</h2>
+							<h2 className="text-2xl text-black pt-4 h-fit underline">
+								Email: <br />
+								<CopyToClipboard text={email} onCopy={onCopyEmail} className="inline-block cursor-pointer">
+									<span>
+										<a className="text-xl" href={`mailto:${email}`}>
+											{email}
+										</a>{" "}
+										<MdContentCopy className="text-xl inline mx-2" />
+									</span>
+								</CopyToClipboard>
+								{isEmailCopied && <span className="text-[#D42920] ml-2">Copied!</span>}
+							</h2>
 
-						<h2 className="text-2xl text-green-700 pt-4 h-fit underline">
-							GitHub: <br />
-							<CopyToClipboard text={githubLink} onCopy={onCopyGitHub} className="inline-block cursor-pointer">
-								<span>
-									<a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-green-700 text-xl">
-										github.com/Jgar514
-									</a>{" "}
-									<MdContentCopy className="text-xl inline text-green-700 mx-4" />
-								</span>
-							</CopyToClipboard>
-							{isGitHubCopied && <span className="text-green-700 ml-2">Copied!</span>}
-						</h2>
+							<h2 className="text-2xl text-green-700 pt-4 h-fit underline">
+								GitHub: <br />
+								<CopyToClipboard text={githubLink} onCopy={onCopyGitHub} className="inline-block cursor-pointer">
+									<span>
+										<a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-green-700 text-xl">
+											github.com/Jgar514
+										</a>{" "}
+										<MdContentCopy className="text-xl inline text-green-700 mx-4" />
+									</span>
+								</CopyToClipboard>
+								{isGitHubCopied && <span className="text-green-700 ml-2">Copied!</span>}
+							</h2>
 
-						<h2 className="text-2xl text-blue-700 pt-4 h-fit underline">
-							LinkedIn:{" "}
-							<CopyToClipboard text={linkedinLink} onCopy={onCopyLinkedIn} className="inline-block cursor-pointer">
-								<span>
-									<a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="text-blue-700 text-xl">
-										linkedin.com/in/josh-garvey/
-									</a>{" "}
-									<MdContentCopy className="text-xl inline text-blue-700 mx-2" />
-								</span>
-							</CopyToClipboard>
-							{isLinkedInCopied && <span className="text-blue-700 ml-2">Copied!</span>}
-						</h2>
+							<h2 className="text-2xl text-blue-700 pt-4 h-fit underline">
+								LinkedIn:{" "}
+								<CopyToClipboard text={linkedinLink} onCopy={onCopyLinkedIn} className="inline-block cursor-pointer">
+									<span>
+										<a href={linkedinLink} target="_blank" rel="noopener noreferrer" className="text-blue-700 text-xl">
+											linkedin.com/in/josh-garvey/
+										</a>{" "}
+										<MdContentCopy className="text-xl inline text-blue-700 mx-2" />
+									</span>
+								</CopyToClipboard>
+								{isLinkedInCopied && <span className="text-blue-700 ml-2">Copied!</span>}
+							</h2>
 
-						<h2 className="text-[#F9c22c] text-lg pt-3 h-fit underline">Certificates, Awards, Accomplishments</h2>
-						<p className="text-black h-fit text-sm">
-							-Mendix Rapid Developer Certificate
-							<br />
-							-Responsive Web Design Certificate
-							<br />
-							-Most likely to be famous 5th grade superlative
-							<br />
-							-2004 County Basketball Champion
-							<br />
-							<br />
-							<span className="text-green-600 pl-0 text-lg font-bold">Associate Of Arts Degree - Dec. 2023</span>
-						</p>
+							<h2 className="text-[#F9c22c] text-lg pt-3 h-fit underline">Certificates, Awards, Accomplishments</h2>
+							<p className="text-black h-fit text-sm">
+								-Mendix Rapid Developer Certificate
+								<br />
+								-Responsive Web Design Certificate
+								<br />
+								-Most likely to be famous 5th grade superlative
+								<br />
+								-2004 County Basketball Champion
+								<br />
+								<br />
+								<span className="text-green-600 pl-0 text-lg font-bold">Associate Of Arts Degree - Dec. 2023</span>
+							</p>
+						</div>
 					</motion.div>
 					<motion.div
 						initial={{ opacity: 0 }}

@@ -2,7 +2,7 @@ import React, { Suspense, useState, useRef, useEffect } from "react";
 import Profile from "./ui/Profile";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text, MeshWobbleMaterial } from "@react-three/drei";
+import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text, MeshWobbleMaterial,  } from "@react-three/drei";
 import { getProject, val } from "@theatre/core";
 import { SheetProvider, PerspectiveCamera, useCurrentSheet } from "@theatre/r3f";
 import { editable as e } from "@theatre/r3f";
@@ -170,7 +170,7 @@ export default function App() {
 									<Gltf src="./models/ellienolabel3.glb" castShadow receiveShadow onClick={() => openCarousel(0)} />
 
 									{/* scene.contactcard */}
-									<Gltf src="./models/who3.glb" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
+									<Gltf src="./models/who3.glb" className="cursor-pointer" castShadow receiveShadow onClick={() => setSideBar((sideBar) => !sideBar)} />
 									{/* scene.elephant*/}
 									<Gltf src="./models/wood2.glb" castShadow receiveShadow />
 									{/* scene.computer */}
@@ -288,6 +288,7 @@ function Scene() {
 			<ambientLight intensity={1.5} />
 
 			<e.directionalLight theatreKey="light" position={[-5, 5, -5]} />
+			<Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
 
 			<PerspectiveCamera theatreKey="Camera" makeDefault position={[10, 20, 10]} fov={70} near={0.1} far={70} enableZoom={false} lookAt={cameraTargetRef} />
 			<e.mesh theatreKey="Camera Target" visible="editor" ref={cameraTargetRef}>

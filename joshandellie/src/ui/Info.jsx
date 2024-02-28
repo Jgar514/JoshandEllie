@@ -180,21 +180,17 @@ function Info() {
 							</a>
 						</div>
 
-						<div className="items-center ">
-							<a href={employerInfo.printableResumeLinkPdf} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-								Resume(Full Links)
-							</a>
-						</div>
+
 						<div className="flex items-center">
 							<a href={employerInfo.resumeLinkMarkdown} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
 								Resume(Markdown)
 							</a>
 						</div>
-						<div className="flex items-center">
+						{/* <div className="flex items-center">
 							<a href={employerInfo.resumeLinkPdf} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
 								Resume(PDF)
 							</a>
-						</div>
+						</div> */}
 					</div>
 				)}
 			</div>

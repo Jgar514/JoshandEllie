@@ -18,7 +18,7 @@ function Info() {
 	const employerInfo = {
 		workHistoryLink: "https://github.com/Jgar514/workhistory/blob/main/README.md",
 		resumeLinkMarkdown: "https://github.com/Jgar514/RESUME",
-		resumeLinkPdf: "https://drive.google.com/file/d/125oe7jPOPAGybF_Kn8je9KGgf4gwatBe/view?usp=sharing",
+		resumeLinkPdf: "https://drive.google.com/file/d/1s9AW2AYQOKWVfdUiXc7QFkzaIjC2L5AC/view?usp=sharing",
 		printableResumeLinkPdf: "https://drive.google.com/file/d/1aDU29hAbhEqe__ZWXHgDs_S87p-nqIci/view?usp=sharing",
 	};
 	const linkedinProfile = "https://www.linkedin.com/in/josh-garvey/";
@@ -88,6 +88,7 @@ function Info() {
 
 	return (
 		<div className="h-full bg-gray-100 flex flex-col gap-2 overflow-y-auto w-full">
+
 			<div className="bg-gray-50 h-fit">
 				<h1 className="bg-white m-0 p-4 cursor-pointer text-2xl border-b-2 " onClick={toggleContactDropdown}>
 					Contact
@@ -174,6 +175,11 @@ function Info() {
 				</h1>
 				{isEmployerDropdownOpen && (
 					<div className="h-full pl-8 flex flex-col gap-y-2 pt-2 text-base overflow-y-auto pb-6">
+						<div className="items-center ">
+							<a href={employerInfo.resumeLinkPdf} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
+								Resume June 2024
+							</a>
+						</div>
 						<div className="items-center ">
 							<a href={employerInfo.workHistoryLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
 								Work History

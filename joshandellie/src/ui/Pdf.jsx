@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import { Container, Row } from "react-bootstrap";
-// import Button from "react-bootstrap/Button";
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-import pdf from "../utils/resume.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/Page/TextLayer.css";
+import pdf from "../utils/resume3.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-function ResumeNew() {
+function ResumeNew({ currentPage }) {
 	const [width, setWidth] = useState(1200);
 
 	useEffect(() => {
@@ -19,14 +12,9 @@ function ResumeNew() {
 	}, []);
 
 	return (
-		<div className="flex    ">
-			{/* <div className="h-fit flex bg-blue-200 justify-end p-2 w-full ">
-				<AiOutlineDownload />
-				<p>Download</p>
-			</div> */}
-
-			<Document file={pdf} className="w-full h-auto">
-				<Page pageNumber={1} scale={width > 786 ? 0.7 : 0.6} />
+		<div className="flex">
+			<Document file={pdf} className="w-full h-full overflow-hidden">
+				<Page pageNumber={currentPage} scale={width > 786 ? 0.7 : 0.7} />
 			</Document>
 		</div>
 	);

@@ -25,7 +25,7 @@ export default function Modal({ isOpen, onClose }) {
 										<span className="text-black h-fit w-6 text-3xl outline-none focus:outline-none">X</span>
 									</button>
 								</div>
-								<div className="bg-black h-full py-4 mt-0 flex items-start justify-center">
+								<div className="bg-black h-full py-2 mt-0 flex items-start justify-center">
 									<ResumeNew currentPage={currentPage} />
 								</div>
 							</div>

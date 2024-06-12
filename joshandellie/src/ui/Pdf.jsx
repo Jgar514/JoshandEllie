@@ -12,7 +12,7 @@ function ResumeNew({ currentPage }) {
 	}, []);
 
 	return (
-		<div className="flex">
+		<div className="flex items-start">
 			<Document file={pdf} className="w-full h-full overflow-hidden">
 				<Page pageNumber={currentPage} scale={width > 786 ? 0.7 : 0.7} />
 			</Document>

@@ -2,7 +2,7 @@ import React, { Suspense, useState, useRef, useEffect } from "react";
 import Profile from "./ui/Profile";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text, MeshWobbleMaterial,  } from "@react-three/drei";
+import { Gltf, OrbitControls, ScrollControls, useScroll, Preload, Text, MeshWobbleMaterial, } from "@react-three/drei";
 import { getProject, val } from "@theatre/core";
 import { SheetProvider, PerspectiveCamera, useCurrentSheet } from "@theatre/r3f";
 import { editable as e } from "@theatre/r3f";
@@ -60,6 +60,14 @@ export default function App() {
 
 	return (
 		<div className="relative z-0 h-full bg-yellow-100  ">
+			{/* <nav className="h-10 flex flex-row w-full bg-black justify-center">
+				<nav className="h-10 flex flex-row w-full bg-black justify-center items-center text-gray-50 gap-4">
+					<div>[home]</div>
+					<div>[work]</div>
+					<div>[blog]</div>
+					<div>[about]</div>
+				</nav>
+			</nav> */}
 			<section className="relative w-full h-full mx-auto bg-white white">
 				{/* menu.opened */}
 

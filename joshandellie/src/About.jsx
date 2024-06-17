@@ -1,4 +1,15 @@
 import React from 'react';
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineMail,
+  AiOutlineSend,
+  AiOutlineMenu,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+import { FaDev } from "react-icons/fa";
+
+
 
 export default function About() {
   return (
@@ -16,9 +27,40 @@ export default function About() {
 
             {/* Social Icons Row */}
             <div className="flex items-center mt-4 gap-4 w-full">
-              <div>github</div>
-              <div>github</div>
-              <div>github</div>
+              <a
+                href="https://github.com/jgar514"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <AiFillGithub size={24} />
+              </a>
+              <a
+                href="https://linkedin.com/in/josh-garvey"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <AiFillLinkedin size={24} />
+              </a>
+              <a
+                href="mailto:josh.t.garvey@gmail.com"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <AiOutlineMail size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/joshgarvey/"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <AiOutlineInstagram size={24} />
+              </a>
+              <a
+                href="https://dev.to/jgar514"
+                className="text-gray-700 hover:text-gray-900"
+              >
+                <FaDev size={24} />
+              </a>
             </div>
           </div>
         </div>
@@ -28,7 +70,7 @@ export default function About() {
             My name is Josh Garvey and I am based out of Annapolis, Maryland. I have always liked to build things. I use to build projects with wood and screws and now I build projects with Javascript and React. I am very goal oriented and most of my time is spent improving my developer skills, along with the rest of the processes that make up the game of life. I value being a brother to 4 siblings and an uncle to 7 nephews and nieces.
           </p>
           <p className="text-gray-700 mb-4">
-          If a project needs a database I use MongoDB/Mongoose or recently started using firebase. I can style applications quickly with Tailwind CSS and I build all my UI components from scratch.
+            If a project needs a database I use MongoDB/Mongoose or more recently started using firebase. I can style applications quickly with Tailwind CSS and I build all my UI components from scratch. I'm a big fan of netlify for both the ease of use and there generous free teir that has allowe me to code and publish a mojority of my projects.
           </p>
         </div>
         <div className="mt-6">
@@ -46,8 +88,8 @@ export default function About() {
               <li>Tailwind CSS</li>
               <li>HTML</li>
               <li>CSS</li>
-              <li>GraphQL</li>
-              <li>PostgreSQL</li>
+              <li>Firebase</li>
+              <li>Microsoft Azure</li>
             </ul>
           </div>
         </div>
@@ -66,4 +108,3 @@ export default function About() {
     </section>
   );
 }
-

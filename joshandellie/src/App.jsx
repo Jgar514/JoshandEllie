@@ -20,6 +20,14 @@ export default function App() {
 							[home]
 						</NavLink>
 						<NavLink
+							to="/about"
+							className={({ isActive }) =>
+								isActive ? "text-yellow-300" : "text-gray-50"
+							}
+						>
+							[about]
+						</NavLink>
+						<NavLink
 							to="/work"
 							className={({ isActive }) =>
 								isActive ? "text-yellow-300" : "text-gray-50"
@@ -35,14 +43,7 @@ export default function App() {
 						>
 							[writings]
 						</NavLink>
-						<NavLink
-							to="/about"
-							className={({ isActive }) =>
-								isActive ? "text-yellow-300" : "text-gray-50"
-							}
-						>
-							[about]
-						</NavLink>
+
 					</div>
 				</nav>
 

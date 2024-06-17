@@ -1,5 +1,6 @@
 import React from 'react';
-import ProjectCard from './ProjectCard'; // Adjust the import path as per your file structure
+import ProjectCard from './ProjectCard';
+import blackline from "./assets/work/homie.png"
 
 function Work() {
   // Example project data
@@ -7,7 +8,7 @@ function Work() {
     {
       title: 'Project 1',
       description: 'Description of project 1.',
-      imageUrl: 'https://placehold.it/300x200',
+      imageUrl: blackline,
       demoUrl: '#',
       githubUrl: '#'
     },
@@ -51,7 +52,7 @@ function Work() {
   ];
 
   return (
-    <div className="container  p-4 bg-gray-50 w-full">
+    <div className=" p-4 bg-white w-full h-full overflow-y-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.map((project, index) => (
           <ProjectCard

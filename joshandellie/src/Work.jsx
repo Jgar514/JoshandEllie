@@ -1,74 +1,38 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
-import blackline from "./assets/work/homie.png"
-import jg from "./assets/work/joshuagarveydotcom.png"
-import ui from "./assets/work/mobileui.png"
+import projects from './data';
 
-function Work() {
-  // Example project data
-  const projects = [
-    {
-      title: 'Project 1',
-      description: 'Firebase for hosting, database, and serverless functions. Stripe payment api and name.com domain search api.',
-      imageUrl: blackline,
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Project 2',
-      description: 'Description of project 2.',
-      imageUrl: jg,
-      demoUrl: jg,
-      githubUrl: '#'
-    },
-    {
-      title: 'Project 3',
-      description: 'Description of project 3.',
-      imageUrl: ui,
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Project 1',
-      description: 'Description of project 1.',
-      imageUrl: 'https://placehold.it/300x200',
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Project 2',
-      description: 'Description of project 2.',
-      imageUrl: 'https://placehold.it/300x200',
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
-      title: 'Project 3',
-      description: 'Description of project 3.',
-      imageUrl: 'https://placehold.it/300x200',
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-
-    // Add more projects as needed
-  ];
-
+const Work = () => {
   return (
-    <div className=" p-4 bg-white w-full h-full overflow-y-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className=" mx-auto p-4 bg-gray-100 h-full w-full overflow-y-auto">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            demoUrl={project.demoUrl}
-            githubUrl={project.githubUrl}
-          />
+          <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+            {project.image && (
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            )}
+            <div className="p-4">
+              <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+
+              <p className="text-gray-600 mb-2">{project.date}</p>
+              <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline mb-2 block">
+                {project.website}
+              </a>
+              <ul className="px-2 list-disc list-outside mb-4 text-sm">
+                {project.description.map((desc, i) => (
+                  <li key={i} className="text-gray-700">{desc}</li>
+                ))}
+              </ul>
+              {project.codeRepository && (
+                <a href={project.codeRepository} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                  Code Repository
+                </a>
+              )}
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Work;

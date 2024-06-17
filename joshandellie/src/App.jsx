@@ -9,42 +9,42 @@ export default function App() {
 	return (
 		<Router>
 			<div className="relative z-0 h-full bg-yellow-100">
-				<nav className="h-10 flex flex-row w-full bg-black justify-center">
-					<div className="h-10 flex flex-row w-full bg-black justify-center items-center text-gray-50 gap-4">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? "text-yellow-300" : "text-gray-50"
-							}
-						>
-							[home]
-						</NavLink>
-						<NavLink
-							to="/about"
-							className={({ isActive }) =>
-								isActive ? "text-yellow-300" : "text-gray-50"
-							}
-						>
-							[about]
-						</NavLink>
-						<NavLink
-							to="/work"
-							className={({ isActive }) =>
-								isActive ? "text-yellow-300" : "text-gray-50"
-							}
-						>
-							[work]
-						</NavLink>
-						<NavLink
-							to="/blog"
-							className={({ isActive }) =>
-								isActive ? "text-yellow-300" : "text-gray-50"
-							}
-						>
-							[writings]
-						</NavLink>
+				<nav className="h-10 flex flex-row w-full bg-black justify-center  items-center text-gray-50 gap-4">
 
-					</div>
+					<NavLink
+						to="/"
+						className={({ isActive }) =>
+							isActive ? "text-yellow-300" : "text-gray-50"
+						}
+					>
+						[home]
+					</NavLink>
+					<NavLink
+						to="/about"
+						className={({ isActive }) =>
+							isActive ? "text-yellow-300" : "text-gray-50"
+						}
+					>
+						[about]
+					</NavLink>
+					<NavLink
+						to="/work"
+						className={({ isActive }) =>
+							isActive ? "text-yellow-300" : "text-gray-50"
+						}
+					>
+						[work]
+					</NavLink>
+					<NavLink
+						to="/blog"
+						className={({ isActive }) =>
+							isActive ? "text-yellow-300" : "text-gray-50"
+						}
+					>
+						[writings]
+					</NavLink>
+
+
 				</nav>
 
 				<Routes>

@@ -36,6 +36,7 @@ const projects = [
       "Successfully marketed the project, getting 20,000 impressions on posts showing the 3D stand-up scene.",
       "Added icons to link social media channels to a central location."
     ],
+    codeRepository: "https://github.com/Jgar514/WilliamMontgomery",
     image: "" // Add image URL here
   },
   {
@@ -48,6 +49,7 @@ const projects = [
       "Implemented authentication, session management, and password hashing functionalities.",
       "Deployed the application using Microsoft Azure Web App Services and implemented CI/CD pipelines for automated deployment."
     ],
+    codeRepository: "https://github.com/Jgar514/mern-azure",
     image: "" // Add image URL here
   },
   {
@@ -60,6 +62,7 @@ const projects = [
       "Added a custom toggle theme option with Tailwind CSS dark mode and React.",
       "Mapped through a data file that stores business information (e.g., services) and displays it."
     ],
+    codeRepository: "https://github.com/Jgar514/blacklinecontracting.com/tree/beta",
     image: "" // Add image URL here
   },
   {
@@ -72,6 +75,7 @@ const projects = [
       "Created tab boxes, horizontal sliders, and popup modals by writing React components and styling them using Tailwind CSS.",
       "Wrote custom reusable components for mobile UX/UI."
     ],
+    codeRepository: "https://github.com/Jgar514/mobileUI_subdomain_netlify/tree/main",
     image: "" // Add image URL here
   },
   {
@@ -85,6 +89,7 @@ const projects = [
       "Conditionally rendered a skip button when time requirements are met.",
       "Created a funnel from the webpage to Daniel Negreanu's Masterclass."
     ],
+    codeRepository: "https://github.com/Jgar514/subdomain_popup",
     image: "" // Add image URL here
   }
 ];

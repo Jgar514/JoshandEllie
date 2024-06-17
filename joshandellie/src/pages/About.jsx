@@ -89,6 +89,9 @@ export default function About() {
           <p className="text-gray-700 mb-4">
             If a project needs a database I use MongoDB/Mongoose or more recently started using firebase. I can style applications quickly with Tailwind CSS and I build all my UI components from scratch. I'm a big fan of netlify for both the ease of use and their generous free tier that has allowed me to code and publish a majority of my projects.
           </p>
+          <p className="text-gray-700 mb-4">
+            If you need a website developer, someone to help automate your business, implement seo, or any tech related questions, feel free to reach out - josh.t.garvey@gmail.com .
+          </p>
         </div>
         <div className="mt-6">
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>

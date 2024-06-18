@@ -1,2 +1,9 @@
-# Redirects
-/about    /index.html   200
+# Redirect all traffic from www to non-www
+https://www.joshuagarvey.com/* https://joshuagarvey.com/:splat 301!
+
+# Redirect all http to https
+http://joshuagarvey.com/* https://joshuagarvey.com/:splat 301!
+http://www.joshuagarvey.com/* https://joshuagarvey.com/:splat 301!
+
+# Handle all other routes and serve index.html
+/* /index.html 200

@@ -9,7 +9,6 @@
 			dataLayer.push(arguments);
 		}
 		gtag("js", new Date());
-
 		gtag("config", "G-CNS3P7193G");
 	</script>
 	<meta charset="UTF-8" />
@@ -19,8 +18,6 @@
 	<meta name="description"
 		content="The work of Josh Garvey - Fullstack Developer from Annapolis, Maryland. Specializing in modern web development technologies and business software solutions." />
 	<meta property="og:title" content="The Work of Josh Garvey" />
-
-
 	<meta property="og:image" content="https://i.imgur.com/Dhsmnk7.png" />
 	<meta property="og:url" content="https://joshuagarvey.com/" />
 	<meta name="author" content="Joshua Garvey" />
@@ -30,20 +27,41 @@
 		href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant:ital,wght@1,500&display=swap"
 		rel="stylesheet" />
 
-
-	<!-- JSON-LD for Person Schema -->
+	<!-- JSON-LD for WebPage with ProfilePage and Person Schema -->
 	<script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Joshua Garvey",
+            "@type": "ProfilePage",
+            "mainEntity": {
+                "@type": "Person",
+                "name": "Joshua Garvey",
+                "image": "https://i.imgur.com/0QbtHg2.jpg",
+                "sameAs": [
+                    "https://x.com/Jgar514",
+                    "https://dev.to/jgar514",
+                    "https://github.com/Jgar514"
+                ]
+            },
             "url": "https://joshuagarvey.com/",
-            "image": "https://i.imgur.com/0QbtHg2.jpg",
-            "sameAs": [
-                "https://x.com/Jgar514",
-                "https://dev.to/jgar514",
-                "https://github.com/Jgar514"
-            ]
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://joshuagarvey.com/"
+                    }
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Josh Garvey",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://i.imgur.com/Dhsmnk7.png"
+                }
+            }
         }
     </script>
 </head>

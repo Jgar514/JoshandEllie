@@ -26,6 +26,7 @@ import Menu from "./ui/Menu";
 import Modal from "./ui/Modal";
 import { Cloud, Stars, Float, Stage, SpotLight, Billboard, Circle } from "@react-three/drei";
 import Reboto from "./utils/Reboto.json";
+import { Helmet } from 'react-helmet';
 
 export default function MainContent() {
   // const sheet = getProject("Fly Through").sheet("Scene");
@@ -60,6 +61,28 @@ export default function MainContent() {
 
   return (
     <div className="relative z-0 h-full bg-yellow-100  ">
+      <Helmet>
+        <title>Josh Garvey - Fullstack Developer</title>
+        <meta name="description" content="Joshua Garvey[dot]com is a portfolio websute for Josh Garvey, a Fullstack Developer from Annapolis, Maryland. Skills in Front End, Back End, Databases, and DevOps." />
+        {/* Add any other meta tags you want for SEO */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Joshua Garvey",
+            "jobTitle": "Fullstack Developer",
+            "image": "https://i.imgur.com/0QbtHg2.jpg,
+            "url": "https://joshuagarvey.com/",
+            "sameAs": [
+              "https://github.com/jgar514",
+              "https://linkedin.com/in/josh-garvey",
+              "mailto:josh.t.garvey@gmail.com",
+              "https://www.instagram.com/joshgarvey/",
+              "https://dev.to/jgar514"
+            ]
+          }
+        `}</script>
+      </Helmet>
       {/* <nav className="h-10 flex flex-row w-full bg-black justify-center">
 				<nav className="h-10 flex flex-row w-full bg-black justify-center items-center text-gray-50 gap-4">
 					<div>[home]</div>

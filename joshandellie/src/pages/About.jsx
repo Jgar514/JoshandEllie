@@ -1,9 +1,9 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiOutlineMail,
-  AiOutlineMenu,
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { FaDev } from "react-icons/fa";
@@ -31,6 +31,29 @@ export default function About() {
 
   return (
     <section className="w-full h-full bg-gray-100 p-8 flex flex-col items-center overflow-y-auto">
+      <Helmet>
+        <title>Josh Garvey - About </title>
+        <meta name="description" content="About Joshua Garvey, Fullstack Developer from Annapolis, Maryland. Skills in Front End, Back End, Databases, and DevOps." />
+        {/* Add any other meta tags you want for SEO */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Joshua Garvey",
+            "jobTitle": "Fullstack Developer",
+            "image": "https://i.imgur.com/0QbtHg2.jpg,
+            "url": "https://joshuagarvey.com/about",
+            "sameAs": [
+              "https://github.com/jgar514",
+              "https://linkedin.com/in/josh-garvey",
+              "mailto:josh.t.garvey@gmail.com",
+              "https://www.instagram.com/joshgarvey/",
+              "https://dev.to/jgar514"
+            ]
+          }
+        `}</script>
+      </Helmet>
+
       <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-6">
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <img

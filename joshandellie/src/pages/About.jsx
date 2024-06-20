@@ -107,7 +107,7 @@ export default function About() {
         <div className="mt-6">
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <p className="text-gray-700 mb-4">
-            My name is Joshua Garvey and I am based out of Annapolis, Maryland. I have always liked to build things. I use to build projects with wood and screws and now I build projects with Javascript and React. I am very goal oriented and most of my time is spent improving my developer skills. I value being a brother to 4 siblings and an uncle to 7 nephews and nieces.
+            My name is Joshua Garvey and I am based out of Annapolis, Maryland. I have always liked to build things. I used to build projects with wood and screws and now I build projects with Javascript and React. I am very goal oriented and most of my time is spent improving my developer skills. I value being a brother to 4 siblings and an uncle to 7 nephews and nieces.
           </p>
           <p className="text-gray-700 mb-4">
             If a project needs a database I use MongoDB/Mongoose or more recently started using firebase. I can style applications quickly with Tailwind CSS and I build all my UI components from scratch. I'm a big fan of netlify for both the ease of use and their generous free tier that has allowed me to code and publish a majority of my projects.

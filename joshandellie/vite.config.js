@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-helmet']
+      external: []  // Ensure this array is empty if not adding any externals
     }
   }
 })

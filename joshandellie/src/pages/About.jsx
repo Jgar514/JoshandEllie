@@ -41,7 +41,7 @@ export default function About() {
             "@type": "Person",
             "name": "Joshua Garvey",
             "jobTitle": "Fullstack Developer",
-            "image": "https://i.imgur.com/0QbtHg2.jpg,
+            "image": "https://i.imgur.com/0QbtHg2.jpg",
             "url": {"https://joshuagarvey.com/about"},
             "sameAs": [
               "https://github.com/jgar514",

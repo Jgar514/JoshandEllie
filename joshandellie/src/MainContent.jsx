@@ -77,7 +77,7 @@ export default function MainContent() {
               "https://github.com/jgar514",
               "https://linkedin.com/in/josh-garvey",
               "mailto:josh.t.garvey@gmail.com",
-              "https://www.instagram.com/joshgarvey/",
+              "https://www.instagram.com/joshgarveydev/",
               "https://dev.to/jgar514"
             ]
           }
@@ -218,7 +218,7 @@ export default function MainContent() {
                   >
                     <Gltf src="./models/github1.glb" castShadow receiveShadow onClick={(e) => window.open("https://github.com/Jgar514")} />
                     <Gltf src="./models/linkedin.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.linkedin.com/in/josh-garvey-05944825a/")} />
-                    <Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarvey/")} />
+                    <Gltf src="./models/insta.glb" castShadow receiveShadow onClick={(e) => window.open("https://www.instagram.com/joshgarveydev/")} />
                     <Gltf src="./models/email.glb" castShadow receiveShadow onClick={openEmailWindow} />
                   </Float>
                   <Billboard

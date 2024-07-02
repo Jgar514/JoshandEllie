@@ -145,7 +145,7 @@ export default function About() {
           </p>
           <p className="text-gray-700 mb-2">
             <strong>Rapid Application Developer (RAD)</strong> <br />
-            Mendix
+            Mendix .
           </p>
         </div>
       </div>

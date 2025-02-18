@@ -47,7 +47,7 @@ export default function About() {
               "https://github.com/jgar514",
               "https://linkedin.com/in/josh-garvey",
               "mailto:josh.t.garvey@gmail.com",
-              "https://www.instagram.com/joshgarvey/",
+              "https://www.instagram.com/joshgarveydev/",
               "https://dev.to/jgar514"
             ]
           }

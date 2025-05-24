@@ -90,7 +90,7 @@ export default function About() {
                 <AiOutlineMail size={24} />
               </a>
               <a
-                href="https://www.instagram.com/joshgarvey/"
+                href="https://www.instagram.com/joshgarveydev/"
                 className="text-gray-700 hover:text-gray-900"
               >
                 <AiOutlineInstagram size={24} />
